@@ -18,7 +18,7 @@ public class GamePlayMaster : MonoBehaviour
     {
         if (_input != null) { _input = new PlayerInputMap(); }
         if(SceneManager.GetActiveScene().buildIndex == 0) {
-            SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
         }
 
         _input = new PlayerInputMap();
@@ -34,7 +34,7 @@ public class GamePlayMaster : MonoBehaviour
         }
         SceneManager.UnloadSceneAsync("PauseMenu");
 
-        SceneManager.LoadScene("GameScene", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
         _is_paused = false;
 
     }
@@ -52,9 +52,10 @@ public class GamePlayMaster : MonoBehaviour
 
     void MainMenuAsk(CallbackContext context){
 
-        if(_is_paused != true){
+        if(_is_paused != true) {
             _is_paused = true;
-            Time.timeScale = 0f;
+            print(Time.timeScale);
+            //Time.timeScale = 0f;
             GamePauseAction?.Invoke();
             SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
         }

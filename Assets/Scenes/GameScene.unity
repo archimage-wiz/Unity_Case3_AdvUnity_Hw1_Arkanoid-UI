@@ -233,52 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b2cd8e915aa4940b92e2888be2bbcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &232749369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 232749370}
-  - component: {fileID: 232749371}
-  m_Layer: 0
-  m_Name: BricksContainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &232749370
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232749369}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &232749371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232749369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c500661d1a471fd4ab5d7da67a20b708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BricksMatrix_x: 9
-  BricksMatrix_y: 10
 --- !u!1 &270405948
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,8 +262,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eae16524d191fd4da7d7e437feacd04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _master: {fileID: 0}
+  BricksMatrix_x: 9
+  BricksMatrix_y: 9
   _ball: {fileID: 1589087385}
+  _tunnel: {fileID: 2026618915}
+  _p1_camera: {fileID: 1296576475}
+  _p2_camera: {fileID: 1352574063}
 --- !u!4 &270405950
 Transform:
   m_ObjectHideFlags: 0
@@ -765,7 +723,7 @@ Transform:
   - {fileID: 1352574064}
   - {fileID: 2092693343}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &482650070
 MonoBehaviour:
@@ -2741,6 +2699,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1116327580, guid: 35124a703544f1f40a4def4484aadb37, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 576629775547592721, guid: 35124a703544f1f40a4def4484aadb37,
         type: 3}
       propertyPath: m_Name
@@ -2749,7 +2711,7 @@ PrefabInstance:
     - target: {fileID: 576629775547592722, guid: 35124a703544f1f40a4def4484aadb37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 576629775547592722, guid: 35124a703544f1f40a4def4484aadb37,
         type: 3}
@@ -2943,7 +2905,7 @@ Transform:
   - {fileID: 1296576476}
   - {fileID: 1582961843}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &1830789433
 MonoBehaviour:
@@ -3332,7 +3294,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2026618916}
-  - component: {fileID: 2026618917}
   m_Layer: 0
   m_Name: Tunnel
   m_TagString: Untagged
@@ -3369,18 +3330,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2026618917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026618915}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50efa13dd03b36b43b792a27d9212107, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2092693342
 GameObject:
   m_ObjectHideFlags: 0

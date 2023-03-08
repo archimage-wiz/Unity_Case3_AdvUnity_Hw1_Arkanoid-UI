@@ -15,13 +15,14 @@ public class BallController : MonoBehaviour
     private Vector3 _av_before_collision;
     private PlayerController _last_player;
 
-    void OnEnable() {
+    void Start() {
 
         _self_rigidbody = transform.GetComponent<Rigidbody>();
 
-        _last_vector = new Vector3(Random.Range(-1, 1), 0, Random.Range(-1, 1)) * _ball_speed;
+        //_last_vector = new Vector3(Random.Range(-1, 1), 0, Random.Range(-1, 1)) * _ball_speed;
         //_last_vector = new Vector3(15, 5, 5) * _ball_speed;
-        _self_rigidbody.velocity = _last_vector;
+        _self_rigidbody.velocity = Vector3.back;
+        //print(_self_rigidbody.GetInstanceID());
 
     }
 
@@ -57,6 +58,7 @@ public class BallController : MonoBehaviour
     void Update()
     {
         if (_self_rigidbody.velocity.x == 0) { _last_vector += Vector3.one * Time.deltaTime; }
+        //print(_self_rigidbody.GetInstanceID());
         
         if (_last_vector.x > 0 && _last_vector.x < 5) { _last_vector += new Vector3(0.1f, 0, 0) * Time.deltaTime; }
         if (_last_vector.x < 0 && _last_vector.x > -5) { _last_vector -= new Vector3(0.1f, 0, 0) * Time.deltaTime; }

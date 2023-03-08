@@ -54,7 +54,7 @@ public class GamePlayMaster : MonoBehaviour
 
         if(_is_paused != true) {
             _is_paused = true;
-            print(Time.timeScale);
+            //print(Time.timeScale);
             //Time.timeScale = 0f;
             GamePauseAction?.Invoke();
             SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);

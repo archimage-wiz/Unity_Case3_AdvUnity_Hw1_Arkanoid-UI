@@ -71,7 +71,7 @@ public class SceneGamePlayMaster : MonoBehaviour
         }
 
         var _brick = Resources.Load("Brick", typeof(GameObject)) as GameObject;
-        print(_brick);
+        //print(_brick);
 
         for(int y_cnt = 0; y_cnt < _bricks.Length; y_cnt++)
         {

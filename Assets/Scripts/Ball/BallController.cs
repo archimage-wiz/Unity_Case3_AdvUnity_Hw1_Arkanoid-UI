@@ -19,9 +19,9 @@ public class BallController : MonoBehaviour
 
         _self_rigidbody = transform.GetComponent<Rigidbody>();
 
-        //_last_vector = new Vector3(Random.Range(-1, 1), 0, Random.Range(-1, 1)) * _ball_speed;
+        _last_vector = new Vector3(Random.Range(-1, 1), 0, Random.Range(-1, 1)) * _ball_speed;
         //_last_vector = new Vector3(15, 5, 5) * _ball_speed;
-        _self_rigidbody.velocity = Vector3.back;
+        _self_rigidbody.velocity = _last_vector;
         //print(_self_rigidbody.GetInstanceID());
 
     }
